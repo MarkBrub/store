@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
 }
 
 code {
@@ -16,5 +17,103 @@ code {
   padding: 0.75em;
   background-color: #e9ecee;
   border-radius: 0.25em;
+  font-weight: light;
   font-style: normal;
+  font-size: smaller;
+}
+
+a {
+  text-decoration: none;
+}
+
+#breadcrumbProductName {
+  color: #939699;
+}
+
+#jumbo {
+  background-color: #f8f9fa;
+  border-radius: 0.25em;
+  margin: 1em 0 1em 0;
+  padding: 3em 0 3em 0;
+  display: inline-block;
+  width: 100%;
+}
+
+#productImage {
+  float: left;
+  vertical-align: middle;
+  box-sizing: border-box;
+  margin-right: 1em;
+  width: 300px;
+  height: 300px;
+}
+
+#productName {
+  font-size: 2.5em;
+  font-weight: lighter;
+  display: block;
+  margin: 0;
+}
+
+#productPrice {
+  display: inline-block;
+  background-color: #0074fd;
+  color: white;
+  padding: 0.2em 0.4em 0.2em 0.4em;
+  border-radius: 0.25em;
+  font-weight: bolder;
+}
+
+#productDescription {
+  font-weight: lighter;
+  margin-top: 1em;
+}
+
+ul {
+  list-style-type: none;
+  border-radius: 0.5em;
+  margin: 0;
+  padding: 0;
+}
+
+.noReviews {
+  background-color: #f0f1f2;
+}
+
+.review {
+  background-color: #f0f1f2;
+  border: 0.1em solid #c8cccf;
+  border-radius: 0.5em;
+  overflow: hidden;
+}
+
+.list-group {
+  border-radius: 0.5em;
+}
+
+.reviewRating {
+  padding: 0.5em;
+  border-bottom: 0.075em solid #c8cccf;
+}
+
+.reviewText {
+  background-color: #f8f9fa;
+  padding: 0.75em;
+  overflow: hidden;
+}
+
+.username {
+  font-size: smaller;
+  color: #939699;
+  display: inline-block;
+}
+
+.date {
+  font-size: smaller;
+  color: #939699;
+  float: right;
+}
+
+.comment {
+  font-size: smaller;
 }

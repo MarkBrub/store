@@ -28,13 +28,15 @@ export class ProductDetails extends React.Component {
         return <>
             <div id="navBar">
                 <a href="http://localhost:3000/" >Tasty snacks</a>
-                <span> / { this.state.product.name }</span>
-            </div>
-            <Jumbotron>
-                <img src="https://johnlawrimore.com/smu/101.png"></img>
-                <h1>Name</h1>
-                <Badge>Price</Badge>
-                <p>Description</p>
+                <span id="breadcrumbProductName"> {" / " + this.state.product.name }</span>
+            </div> 
+            <Jumbotron id="jumbo">
+                <img src={ this.state.product.imageUrl } id="productImage"></img>
+                <div id="productInfo">
+                    <h1 id="productName">{ this.state.product.name }</h1>
+                    <Badge id="productPrice">{ "$" + this.state.product.price }</Badge>
+                    <div id="productDescription">{ this.state.product.description }</div>
+                </div>
             </Jumbotron>
             <ReviewList reviews={ this.state.product.reviews } />
             <ReviewForm addReview={ review => this.addReview(review) } />

@@ -1,15 +1,29 @@
 import React from 'react';
 import { ProductReview } from '../models/productReview';
+import { Rating } from './rating';
 
 export const ReviewList = props => <>
     {/*Add review count to end of header*/}
-    <h1>Product Reviews</h1>
+    <div>Product Reviews ({ props.reviews.length })</div>
     <ul className="list-group">
         {
-            !props.reviews.length && <li className="list-group-item">Be the first to add a review!</li>
+            !props.reviews.length && <li className="noReviews">
+                <div className="reviewText">Be the first to add a review!</div>
+            </li>
         }
         {
-            props.reviews.map((x, i) => <li className="list-group-item" key={ i }>{ x.userName }</li>)
+            props.reviews.map((x, i) => <li key={i}>
+                <div className="review">
+                    <div className="reviewRating">
+                        <Rating value={x.rating[0]} />
+                    </div>
+                    <div className="reviewText">
+                        <div className="username">{ x.userName }</div>
+                        <div className="date">{ x.date }</div>
+                        <div className="comment">"{ x.comment }"</div>
+                    </div>
+                </div>
+            </li>)
         }
     </ul>
 </>;

@@ -25,7 +25,7 @@ export class ReviewForm extends React.Component {
     render() {
         return <>
             <div>
-                <h1>Add Review</h1>
+                <div>Add Review</div>
                 <form>
                     <input
                         type="text"
