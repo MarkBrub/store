@@ -7,7 +7,7 @@ import { Rating } from './rating';
 export class ReviewForm extends React.Component {
     state = {
         username: "",
-        rating: "",
+        rating: "0",
         comment: ""
     };
 
@@ -17,47 +17,53 @@ export class ReviewForm extends React.Component {
         this.props.addReview(review);
         this.setState({
             username: "",
-            rating: "",
+            rating: "0",
             comment: ""
         });   
     }
 
     render() {
         return <>
-            <div>
-                <div>Add Review</div>
-                <form>
+            <div id="reviewForm">
+                <div id="reviewFormTitle">Add Review</div>
+                <form id="formInput">
+                    <div id="bloc1">
+                    <label htmlFor="name">Your Name</label>
                     <input
                         type="text"
                         name="name"
                         id="name"
-                        className="form-control"
                         value={ this.state.username }
-                        onChange={ event => this.setState({ username: event.target.value }) } />
+                        onChange={event => this.setState({ username: event.target.value })} />
+                    </div>
+                    <div id="bloc2">
+                    <label htmlFor="rating">Rating</label>
                     <select
-                        name="Rating"
-                        id="Rating"
+                        name="rating"
+                        id="rating"
                         value={ this.state.rating }
                         onChange={ event => this.setState({ rating: event.target.value }) }>
                         <option></option>
                         {
                             [1, 2, 3, 4, 5].map((x, i) => <option key={i}>{x + " Star(s)"}</option>)
                         }
-                    </select>
-                    <Rating value={ this.state.rating[0] } />
+                        </select>
+                        <Rating value={this.state.rating[0]} />
+                    </div>
+                    <label htmlFor="comment">Comment</label>
                     <input
                         type="text-area"
                         name="comment"
                         id="comment"
                         value={this.state.comment}
-                        onChange={ event => this.setState({ comment: event.target.value }) }/>
+                        onChange={event => this.setState({ comment: event.target.value })} />
+                    <button
+                        type="button"
+                        id="reviewSubmitButton"
+                        onClick={() => this.onAddClick()}>
+                        Submit
+                    </button>
                 </form>
-                <button
-                    type="button"
-                    className="btn btn-success btn-block"
-                    onClick={() => this.onAddClick()}>
-                    Submit
-                </button>
             </div>
         </>;
     }

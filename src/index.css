@@ -69,11 +69,26 @@ a {
   margin-top: 1em;
 }
 
+#reviewListTitle {
+  font-size: larger;
+  font-weight: 500;
+  margin-bottom: 0.25em;
+}
+
+#numReviews {
+  display: inline-block;
+  color: grey;
+}
+
 ul {
   list-style-type: none;
   border-radius: 0.5em;
   margin: 0;
   padding: 0;
+}
+
+li {
+  margin-bottom: 1em;
 }
 
 .noReviews {
@@ -116,4 +131,80 @@ ul {
 
 .comment {
   font-size: smaller;
+}
+
+input,
+label {
+  display: block;
+}
+
+#reviewForm {
+  border-radius: 0.5em;
+  border: 0.1em solid #c8cccf;
+  margin-top: 1em;
+  overflow: hidden;
+}
+
+#reviewFormTitle {
+  background-color: #858e97;
+  color: white;
+  padding: 0.5em 0.5em 0.5em 1em;
+  font-weight: bold;
+}
+
+#formInput {
+  padding: 1em;
+}
+
+#bloc1 {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 65%;
+}
+
+#bloc2 {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 35%;
+}
+
+input[type="text"] {
+  height: 2em;
+  width: 95%;
+  border-radius: 0.25em;
+  border-width: 0.05em;
+  border-color: #c8cccf;
+}
+
+select {
+  height: 2em;
+  width: 30%;
+  border-radius: 0.25em;
+  border-width: 0.05em;
+  margin-right: 1em;
+  border-color: #c8cccf;
+}
+
+label {
+  font-weight: lighter;
+  font-size: smaller;
+  margin: 0.25em;
+}
+
+input[type="text-area"] {
+  height: 7.5em;
+  width: 99%;
+  border-radius: 0.25em;
+  border-width: 0.05em;
+  border-color: #c8cccf;
+}
+
+#reviewSubmitButton {
+  background-color: #0074fd;
+  margin-top: 1em;
+  display: block;
+  color: white;
+  border-radius: 0.25em;
+  padding: 0.5em;
+  border: none;
 }

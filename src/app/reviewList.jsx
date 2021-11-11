@@ -4,7 +4,7 @@ import { Rating } from './rating';
 
 export const ReviewList = props => <>
     {/*Add review count to end of header*/}
-    <div>Product Reviews ({ props.reviews.length })</div>
+    <div id="reviewListTitle">Product Reviews <div id="numReviews">({ props.reviews.length })</div></div>
     <ul className="list-group">
         {
             !props.reviews.length && <li className="noReviews">
