@@ -51,8 +51,7 @@ export class ReviewForm extends React.Component {
                         <Rating value={this.state.rating[0]} />
                     </div>
                     <label htmlFor="comment">Comment</label>
-                    <input
-                        type="text-area"
+                    <textarea
                         name="comment"
                         id="comment"
                         value={this.state.comment}
