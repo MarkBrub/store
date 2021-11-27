@@ -1,5 +1,4 @@
 import React from 'react';
-import { ProductReview } from '../models/productReview';
 import { Rating } from './rating';
 
 export const ReviewList = props => <>

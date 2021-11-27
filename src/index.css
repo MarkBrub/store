@@ -22,8 +22,9 @@ code {
   font-size: smaller;
 }
 
-a {
+#navBar > a {
   text-decoration: none;
+  color: #5496ed;
 }
 
 #breadcrumbProductName {
@@ -140,9 +141,10 @@ label {
 
 #reviewForm {
   border-radius: 0.5em;
-  border: 0.1em solid #c8cccf;
+  outline: 0.1em solid #c8cccf;
   margin-top: 1em;
   overflow: hidden;
+  margin-bottom: 5em;
 }
 
 #reviewFormTitle {
@@ -207,4 +209,18 @@ textarea {
   border-radius: 0.25em;
   padding: 0.5em;
   border: none;
+}
+
+#header {
+  margin: 0;
+  padding: 0.4em 0.75em 0.5em 0.75em;
+  background-color: #343a40;
+  font-weight: normal;
+  font-style: normal;
+  font-size: larger;
+}
+
+#header > a {
+  text-decoration: none;
+  color: white;
 }

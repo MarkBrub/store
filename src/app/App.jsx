@@ -1,11 +1,19 @@
-import { ProductDetails } from './productDetails'
+import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 
-function App() {
-  return (
-      <div className="App">
-          <ProductDetails></ProductDetails>
-    </div>
-  );
+import { Header } from './header';
+import { ROUTES } from '../routes';
+
+export function App() {
+    return (
+        <>
+        <Header></Header>
+        <Router>
+            <Switch>    
+                {
+                    ROUTES.map((route, index) => <Route key={index} { ...route } />)
+                }
+            </Switch>
+        </Router>
+        </>
+    );
 }
-
-export default App;

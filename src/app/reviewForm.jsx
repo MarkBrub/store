@@ -1,6 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import { Product } from '../models/product';
 import { ProductReview } from '../models/productReview';
 import { Rating } from './rating';
 
