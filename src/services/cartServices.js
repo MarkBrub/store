@@ -1,5 +1,5 @@
-import Cart from './../models/cart';
-import CartItem from './../models/cartItem';
+import { Cart } from './../models/cart';
+import { CartItem } from './../models/cartItem';
 
 export class CartService {
     getCart() {
@@ -8,7 +8,7 @@ export class CartService {
 
     addToCart(product) {
         let cart = window.cart || new Cart();
-        let existing = cart.items.find(x => x.product.id == product.id);
+        let existing = cart.items.find(x => x.product.id === product.id);
         if (existing) {
             existing.quantity += 1;
             existing.totalPrice = existing.product.price * existing.quantity;

@@ -1,6 +1,6 @@
-import React from 'react';
 import { ProductReview } from '../models/productReview';
 import { Rating } from './rating';
+import React from 'react';
 
 export class ReviewForm extends React.Component {
     state = {
@@ -10,8 +10,8 @@ export class ReviewForm extends React.Component {
     };
 
     onAddClick() {
-        var currentDate = new Date();
-        var review = new ProductReview(this.state.username, this.state.rating, this.state.comment, currentDate.toDateString());
+        var currentDate = new Date().toDateString();
+        var review = new ProductReview(this.state.username, this.state.rating, this.state.comment, currentDate);
         this.props.addReview(review);
         this.setState({
             username: "",

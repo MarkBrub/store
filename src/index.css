@@ -32,10 +32,11 @@ code {
 }
 
 #jumbo {
+  box-sizing: border-box;
   background-color: #f8f9fa;
   border-radius: 0.25em;
   margin: 1em 0 1em 0;
-  padding: 3em 0 3em 0;
+  padding: 3em 3em 3em 0;
   display: inline-block;
   width: 100%;
 }
@@ -45,6 +46,7 @@ code {
   vertical-align: middle;
   box-sizing: border-box;
   margin-right: 1em;
+  margin-left: 1em;
   width: 300px;
   height: 300px;
 }
@@ -223,4 +225,90 @@ textarea {
 #header > a {
   text-decoration: none;
   color: white;
+}
+
+#listNavBar {
+  color: #939699;
+}
+
+#listContainer {
+  min-height: 5em;
+  margin-top: 1em;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+}
+
+.productListing {
+  width: 31.25%;
+  border-radius: 0.25em;
+  border: 0.1em solid #e9ecee;
+  padding: 2%;
+}
+
+.imgPriceContainer {
+  position: relative;
+}
+
+.listingImage {
+  width: 60%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.listingPrice {
+  position: absolute;
+  background-color: #00a647;
+  color: white;
+  padding: 0.075em 0.4em 0.075em 0.4em;
+  border-radius: 1em;
+  font-weight: bolder;
+  font-size: xx-small;
+  bottom: 0;
+  right: 5%;
+}
+
+.listingName {
+  box-sizing: border-box;
+  width: 100%;
+  text-align: center;
+  font-size: 0.9em;
+  font-weight: 500;
+  color: #343a40;
+  height: 3.5em;
+}
+
+a.listingButton {
+  font-size: small;
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
+}
+
+#cart {
+  padding: 1em;
+}
+
+#cartTable {
+  border-bottom: 1px solid #dee2e6;
+}
+
+.cartProducts {
+  text-align: left;
+}
+
+.totals {
+  text-align: right;
+}
+
+.eachPrice {
+  color: gray;
+}
+
+#total {
+  width: 100%;
+  font-weight: bold;
+  padding: 1em;
+  padding-top: 0.5em;
+  text-align: right;
 }

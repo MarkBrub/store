@@ -6,14 +6,14 @@ import { ROUTES } from '../routes';
 export function App() {
     return (
         <>
-        <Header></Header>
-        <Router>
-            <Switch>    
-                {
-                    ROUTES.map((route, index) => <Route key={index} { ...route } />)
-                }
-            </Switch>
-        </Router>
+            <Router>
+                <Header></Header>
+                <Switch>    
+                    {
+                        ROUTES.map((route, index) => <Route key={index} { ...route } />)
+                    }
+                </Switch>
+            </Router>
         </>
     );
 }

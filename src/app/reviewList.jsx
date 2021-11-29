@@ -1,5 +1,5 @@
-import React from 'react';
 import { Rating } from './rating';
+import React from 'react';
 
 export const ReviewList = props => <>
     {/*Add review count to end of header*/}

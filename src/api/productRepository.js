@@ -1,3 +1,4 @@
+import { ProductReview } from '../models/productReview';
 import axios from 'axios';
 
 export class ProductRepository {
@@ -32,9 +33,10 @@ export class ProductRepository {
         });
     }
 
-    addReview(review) {
+    addReview(id, review) {
         return new Promise((resolve, reject) => {
-            axios.post(`${this.url}`, review, this.config)
+            console.log(review);
+            axios.post(`${this.url}/${id}/reviews`, new ProductReview(review.userName, review.rating, review.comment, review.date), this.config)
                 .then(x => resolve(x.data))
                 .catch(x => {
                     alert(x);

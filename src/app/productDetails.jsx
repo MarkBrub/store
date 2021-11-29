@@ -1,6 +1,7 @@
 import '../index.css';
 
 import { Badge } from 'react-bootstrap';
+import { CartService } from "../services/cartServices";
 import { Jumbotron } from 'react-bootstrap';
 import { Product } from '../models/product';
 import { ProductRepository } from '../api/productRepository';
@@ -10,6 +11,7 @@ import { ReviewList } from './reviewList';
 
 export class ProductDetails extends React.Component {
     productRepository = new ProductRepository();
+    cartService = new CartService();
 
     state = {
         product: undefined
@@ -19,6 +21,11 @@ export class ProductDetails extends React.Component {
         var reviews = this.state.product.reviews;
         reviews.push(review);
         this.setState({ reviews });
+
+        //The API always returns a 400 error when I call addReview() and I spent hours trying to figure out why
+        //the function is dumb
+        //it makes me sad
+        //this.productRepository.addReview(this.state.product.id, review).then());
     }
 
     render() {
